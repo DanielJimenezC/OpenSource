@@ -6,6 +6,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name="lineas")
 public class Linea {
@@ -14,9 +16,11 @@ public class Linea {
 	private int cantidad;
 	
 	@ManyToOne
+	@JsonIgnoreProperties("lineas")
 	private Venta venta;
 	
 	@ManyToOne
+	@JsonIgnoreProperties("lineas")
 	private Producto producto;
 	
 	public int getCantidad() {

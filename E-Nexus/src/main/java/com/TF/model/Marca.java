@@ -11,6 +11,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name="marcas")
 public class Marca {
@@ -24,7 +26,8 @@ public class Marca {
 	@Size(min=3, max=100, message="El campo no cumple la longuitud")
 	private String descripcion;
 	
-	@OneToMany 
+	@JsonIgnoreProperties("marca")
+	@OneToMany(mappedBy="marca") 
 	private List<Producto> productos;
 	
 	public int getId() {

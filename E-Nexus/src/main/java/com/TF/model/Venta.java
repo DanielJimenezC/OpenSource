@@ -18,6 +18,8 @@ import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name="ventas")
 public class Venta {
@@ -40,7 +42,8 @@ public class Venta {
 	@Size(min=3, max=100, message="El campo no cumple la longuitud")
 	private String observacion;
 	
-	@OneToMany
+	@JsonIgnoreProperties("venta")
+	@OneToMany(mappedBy="venta")
 	private List<Linea> lineas;
 	
 	public int getId() {

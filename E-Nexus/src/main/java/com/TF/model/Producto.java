@@ -12,6 +12,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name="productos")
 public class Producto {
@@ -31,9 +33,11 @@ public class Producto {
 	private String especificacion;
 	
 	@ManyToOne
+	@JsonIgnoreProperties("productos")
 	private Marca marca;
 	
-	@OneToMany
+	@JsonIgnoreProperties("producto")
+	@OneToMany(mappedBy="producto")
 	private List<Linea> lineas;
 	
 	public int getId() {
