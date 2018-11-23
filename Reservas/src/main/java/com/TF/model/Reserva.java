@@ -35,7 +35,7 @@ public class Reserva {
 	
 	@ManyToOne
 	@JsonIgnoreProperties("reservas")
-	private Restaurant restaurant;
+	private Restaurant restaurante;
 	
 	@ManyToOne
 	@JsonIgnoreProperties("reservas")
@@ -65,11 +65,11 @@ public class Reserva {
 	public void setMedio(MedioPago medio) {
 		this.medio = medio;
 	}
-	public Restaurant getRestaurant() {
-		return restaurant;
+	public Restaurant getRestaurante() {
+		return restaurante;
 	}
-	public void setRestaurant(Restaurant restaurant) {
-		this.restaurant = restaurant;
+	public void setRestaurant(Restaurant restaurante) {
+		this.restaurante = restaurante;
 	}
 	public Tipo getTipo() {
 		return tipo;

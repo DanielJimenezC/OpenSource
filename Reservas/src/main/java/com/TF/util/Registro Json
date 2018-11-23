@@ -1,0 +1,34 @@
+Registro Restaurantes
+=====================================
+{
+	"nombre": " ",
+	"precio": " ",
+	"descripcion": " "
+}
+
+
+Registro Tipo
+=====================================
+{
+	"nombre": " ",
+	"descripcion": " "
+}
+
+
+Registro Medio de Pago
+=====================================
+{
+	"nombre": " ",
+	"descripcion": " "
+}
+
+
+Registro Reserva
+=====================================
+{
+	"cantidad": 4,
+	"fecha": "2018-11-25",
+	"medio": { "id": 2 },
+	"tipo": { "id": 1 },
+	"restaurante": { "id":2 }
+}

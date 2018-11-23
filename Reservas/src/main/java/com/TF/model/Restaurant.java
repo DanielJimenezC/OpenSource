@@ -34,8 +34,8 @@ public class Restaurant {
 	@Size(min=3, max=100, message="El campo no cumple con longitud")
 	private String descripcion;
 	
-	@OneToMany(mappedBy="restaurant")
-	@JsonIgnoreProperties("restaurant")
+	@OneToMany(mappedBy="restaurante")
+	@JsonIgnoreProperties("restaurante")
 	private List<Reserva> reservas;
 	
 	public int getId() {
