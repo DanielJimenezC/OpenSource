@@ -1,0 +1,47 @@
+<div class="form-group" style="text-align:center">
+    <hr>  
+      <h2>Registrar Reservas</h2>
+    <hr>
+</div>
+
+<div class="jumbotron col-md-8 offset-md-2" style="background-color: black; height: 600px;">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <form style="margin-top: -40px">
+            <div class="form-group">
+                <label for="I1" style="color:white">Nombre</label>
+                <input [(ngModel)]="reserva.nombre" class="form-control" placeholder="nombre usuario" id="I1" name="nombre">
+            </div>
+            <div class="form-group">
+                <label for="I2" style="color:white">Restaurante</label>
+                <select [(ngModel)]="reserva.restaurante.id" name="reserva.restaurante.id" class="form-control" id="I2">
+                  <option *ngFor="let restaurante of restaurantes" value="{{restaurante.id}}">{{restaurante.nombre}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="I3" style="color:white">Tipo</label>
+                <select [(ngModel)]="reserva.tipo.id" name="reserva.tipo.id" class="form-control" id="I3">
+                  <option *ngFor="let tipo of tipos" value="{{tipo.id}}">{{tipo.nombre}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="I4" style="color:white">Cantidad</label>
+                <input [(ngModel)]="reserva.cantidad" class="form-control" placeholder="cantidad de comensales" id="I4" name="cantidad">
+            </div>
+            <div class="form-group">
+                <label for="I5" style="color:white">Medio de Pago</label>
+                <select [(ngModel)]="reserva.medio.id" name="reserva.medio.id" class="form-control" id="I5">
+                  <option *ngFor="let medio of medios" value="{{medio.id}}">{{medio.nombre}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="I6" style="color:white">Fecha</label>
+                <input [(ngModel)]="reserva.fecha" class="form-control" placeholder="fecha (yyyy-mm-dd)" id="I6" name="fecha">
+            </div>
+            <div class="offset-md-10">
+                <button class="btn btn-outline-warning" (click)="addReserva()">Registrar</button>
+            </div>  
+        </form>
+      </div>
+    </div>
+</div>
