@@ -1,32 +1,79 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<nav class="navbar sticky-top navbar-dark bg-dark">
-  <a class="navbar-brand">
-    <img src="https://image.flaticon.com/icons/png/512/98/98017.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    <label style="color:white">E-Nexus</label>
-  </a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" style="color:#FFFFFF">
+        <img src="https://image.flaticon.com/icons/png/512/98/98017.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        E-Nexus
+      </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item active">
+          <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Tipo de Restaurante
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" routerLink="/tipo-add">Registrar</a>
+              <a class="dropdown-item" href="#">Listar</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Restaurantes
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Registrar</a>
+              <a class="dropdown-item" href="#">Listar</a>
+            </div>
+          </li>
+      </ul>
+      <a class="btn btn-outline-warning" href="#">Reservar</a>
+    </div>
 </nav>
 
-
-<div style="text-align:center">
-  <h1>
-    Bienvenido {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="container">
+   <div class="row">
+     <div class="col-md-12 jumbotron">
+         <div class="text-center">
+           <div class="row">
+             <div class="col-md-4 offset-md-4">
+                 <h1 style="background-color: rgba(0, 0, 0, 0.363)">Spoons & Forks</h1>
+             </div>   
+          </div>
+           <div class="row">  
+             <div class="col-md-8 offset-md-2">     
+               <p style="background-color: rgba(0, 0, 0, 0.363)">
+                Disfruta de una hermosa cena frente al mar, un desayuno en el centro de 
+                la ciudad o un almuerzo junto a los compañeros del trabajo.
+                Spoons & Forks, el mejor sitio web para conocer sobre restaurantes y realizar 
+                una reservación en cualquier momento.  
+               </p>
+             </div>
+           </div>
+        </div>
+     </div>
+    </div>
+   <div class="row">
+     <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+   </div>
 </div>
-<div class="alert alert-primary" role="alert">
-  A simple primary alert—check it out!
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<footer class="page-footer font-small special-color-dark pt-4">
+  <div class="footer-copyright text-center py-3" style="background-color:black">
+    <div class="container pt-3 py-2">
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+           <img src="https://cdn.icon-icons.com/icons2/1211/PNG/512/1491579586-yumminkysocialmedia21_83091.png" alt="..." class="rounded-circle" width="35" height="35">
+        </li>
+      </ul>
+    </div>
+    <span style="color:rgb(179, 179, 179)">© 2018 Copyright</span>
+  </div>
+</footer>
+
