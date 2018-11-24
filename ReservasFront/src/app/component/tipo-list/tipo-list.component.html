@@ -1,0 +1,26 @@
+<div class="form-group" style="text-align:center">
+    <hr>  
+      <h2>Lista Tipo de Restaurant</h2>
+    <hr>
+</div>
+
+    <div class="row">
+      <div class="col-md-7 offset-md-3">
+        <table class="table table-striped table-dark">
+          <thead>
+            <tr>
+              <th scope="col" style="color:white">Id</th>
+              <th scope="col" style="color:white">Nombre</th>
+              <th scope="col" style="color:white">Descripcion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let tipo of tipos">
+              <td style="color:white">{{tipo.id}}</td>
+              <td style="color:white">{{tipo.nombre}}</td>
+              <td style="color:white"> {{tipo.descripcion}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>

@@ -26,8 +26,9 @@ Registro Medio de Pago
 Registro Reserva
 =====================================
 {
-	"cantidad": 4,
-	"fecha": "2018-11-25",
+	"cantidad": 2,
+	"fecha": "2018-11-26",
+	"nombre": "Jose Luis Perez",
 	"medio": { "id": 2 },
 	"tipo": { "id": 1 },
 	"restaurante": { "id":2 }

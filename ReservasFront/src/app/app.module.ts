@@ -8,11 +8,13 @@ import { HttpClientModule  } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { TipoAddComponent } from './component/tipo-add/tipo-add.component';
+import { TipoListComponent } from './component/tipo-list/tipo-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TipoAddComponent
+    TipoAddComponent,
+    TipoListComponent
   ],
   imports: [
     BrowserModule,

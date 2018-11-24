@@ -4,6 +4,7 @@ import { Tipo } from "./tipo";
 
 export class Reserva{
     id:number;
+    nombre:string;
     cantidad:number;
     fecha:string;
     medio:MedioPago;

@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./tipo-add.component.css']
 })
 export class TipoAddComponent implements OnInit {
+  
   tipo: Tipo = new Tipo();
 
   constructor(private router: Router, private service: TipoService) { }

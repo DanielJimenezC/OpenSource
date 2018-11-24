@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg" style="background-color: black">
     <a class="navbar-brand" style="color:#FFFFFF">
-        <img src="https://image.flaticon.com/icons/png/512/98/98017.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        E-Nexus
+        <img src="http://rcm.ugr.es/wp-content/uploads/2017/08/comedor.png" width="35" height="35" class="d-inline-block align-top" alt="">
+        Spoons & Forks
       </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -18,7 +18,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" routerLink="/tipo-add">Registrar</a>
-              <a class="dropdown-item" href="#">Listar</a>
+              <a class="dropdown-item" routerLink="/tipo-list">Listar</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -26,12 +26,12 @@
               Restaurantes
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Registrar</a>
-              <a class="dropdown-item" href="#">Listar</a>
+              <a class="dropdown-item" routerLink="restaurant-add">Registrar</a>
+              <a class="dropdown-item" routerLink="restaurant-list">Listar</a>
             </div>
           </li>
       </ul>
-      <a class="btn btn-outline-warning" href="#">Reservar</a>
+      <a class="btn btn-outline-warning" routerLink="reserva-add">Reservar</a>
     </div>
 </nav>
 
@@ -69,8 +69,17 @@
     <div class="container pt-3 py-2">
       <ul class="list-unstyled list-inline text-center">
         <li class="list-inline-item">
-           <img src="https://cdn.icon-icons.com/icons2/1211/PNG/512/1491579586-yumminkysocialmedia21_83091.png" alt="..." class="rounded-circle" width="35" height="35">
+           <a href="https://www.facebook.com/">
+           <img src="https://cdn.icon-icons.com/icons2/1211/PNG/512/1491579586-yumminkysocialmedia21_83091.png" alt="..." class="rounded-circle" width="35" height="35"></a>
         </li>
+        <li class="list-inline-item">
+            <a href="https://twitter.com/">
+            <img src="http://maxpwrdubai.com/wp-content/uploads/2017/06/twitter-icon-circle-blue-logo-preview-400x400.png" alt="..." class="rounded-circle" width="45" height="45"></a>
+         </li>
+         <li class="list-inline-item">
+            <a href="https://www.instagram.com/">
+            <img src="https://cdn.icon-icons.com/icons2/1211/PNG/512/1491580635-yumminkysocialmedia26_83102.png" alt="..." class="rounded-circle" width="36" height="36"></a>
+         </li>
       </ul>
     </div>
     <span style="color:rgb(179, 179, 179)">© 2018 Copyright</span>

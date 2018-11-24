@@ -10,7 +10,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -28,6 +30,9 @@ public class Reserva {
 	@NotNull @FutureOrPresent
     @DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date fecha;	
+	@NotBlank(message="El campo no puede estar en blanco")
+	@Size(min=3, max=100, message="El campo no cumple con longitud")
+	private String nombre;
 	
 	@ManyToOne
 	@JsonIgnoreProperties("reservas")
@@ -76,5 +81,11 @@ public class Reserva {
 	}
 	public void setTipo(Tipo tipo) {
 		this.tipo = tipo;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 }
